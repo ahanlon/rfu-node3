@@ -13,6 +13,16 @@ app.get('/', function(req, res){
 	res.send('<form method="post" action="/formsubmit"><input name="email" type="email"><input type="submit"></form>');
 });
 
+// -------------  I did step one with a redirect in stead of a send just for practice   --------------------
+
+// app.get('/', function(req, res){
+// 	res.redirect('/form');
+// });
+
+// app.get('/form', function(req,res){
+// 	res.render('form');
+// });
+
 app.post('/formsubmit', function(req, res){
 	res.redirect('/success');
 });
