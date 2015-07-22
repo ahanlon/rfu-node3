@@ -14,7 +14,11 @@ app.get('/', function(req, res){
 });
 
 app.post('/formsubmit', function(req, res){
-	res.redirect('success');
+	res.redirect('/success');
+});
+
+app.get('/success', function(req, res){
+	res.render('success');
 });
 
 
